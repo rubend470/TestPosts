@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="TestPost" customModuleProvider="target">
+            <connections>
+                <outlet property="homeTableView" destination="uNh-3Q-uQZ" id="0H7-2F-bSO"/>
+                <outlet property="searchTextField" destination="TtR-EI-Pqj" id="x7O-Ge-fw1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xcB-af-BfJ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="   Buscar Post" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TtR-EI-Pqj" customClass="PostTextField" customModule="TestPost" customModuleProvider="target">
+                            <rect key="frame" x="8" y="6" width="398" height="45"/>
+                            <color key="backgroundColor" red="0.8166824494949495" green="0.8166824494949495" blue="0.8166824494949495" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" red="0.19215688110000001" green="0.34901961679999999" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="TtR-EI-Pqj" secondAttribute="bottom" constant="29" id="7Rq-1I-eGV"/>
+                        <constraint firstItem="TtR-EI-Pqj" firstAttribute="leading" secondItem="xcB-af-BfJ" secondAttribute="leading" constant="8" id="Nns-zW-U7H"/>
+                        <constraint firstAttribute="trailing" secondItem="TtR-EI-Pqj" secondAttribute="trailing" constant="8" id="iRg-qe-xip"/>
+                        <constraint firstAttribute="height" constant="80" id="io7-QC-OWk"/>
+                        <constraint firstAttribute="width" constant="414" id="y7Z-34-n0E"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uNh-3Q-uQZ">
+                    <rect key="frame" x="0.0" y="95" width="414" height="767"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="uS7-U0-t2m"/>
+                        <outlet property="delegate" destination="-1" id="3xA-B5-SkC"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="uNh-3Q-uQZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1Xa-Ta-Y1w"/>
+                <constraint firstItem="uNh-3Q-uQZ" firstAttribute="top" secondItem="xcB-af-BfJ" secondAttribute="bottom" constant="15" id="1dx-dX-im5"/>
+                <constraint firstItem="xcB-af-BfJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5y1-EV-HQG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uNh-3Q-uQZ" secondAttribute="trailing" id="ACQ-eJ-Fma"/>
+                <constraint firstItem="xcB-af-BfJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Oh2-m9-cTe"/>
+                <constraint firstItem="xcB-af-BfJ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="cQ0-xG-Mef"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uNh-3Q-uQZ" secondAttribute="bottom" id="gl2-eg-b9c"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="TtR-EI-Pqj">
+            <size key="intrinsicContentSize" width="133.5" height="45"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
